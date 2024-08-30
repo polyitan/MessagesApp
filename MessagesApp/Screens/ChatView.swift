@@ -29,7 +29,7 @@ struct ChatView: View {
                         }
                     }
                     .onReceive(Just(viewModel.$messages)) { message in
-                        print("onReceive: \(viewModel.messages.count), bottom: \(hasScrolledToEnd)")
+                        //print("onReceive: \(viewModel.messages.count), bottom: \(hasScrolledToEnd)")
                         //guard hasScrolledToEnd else { return } // TODO: fix it
                         withAnimation(.easeOut(duration: 0.2).delay(0.1)) {
                             proxy.scrollTo(viewModel.messages.last, anchor: .bottom)
